@@ -1,4 +1,4 @@
-<div class="container color-dark">
+<!-- <div class="container color-dark">
     <div class="col">
         <p>Add a bucket list item</p>
     </div>
@@ -12,11 +12,34 @@
         <form>
             <input type="text" class="txt" name="item" placeholder="Life goal.." [(ngModel)]="goalText">
             <input type="submit" class="btn" [value]="btnText" (click)="addItem()">
+            <div class="list-group">
+                <button type="button"
+                        *ngFor="let goal of goals" 
+                        (click)="removeItem(i)" 
+                        class="list-group-item">
+                        {{ goal }}
+                </button>
+            </div>
         </form>
     </div>
+</div> -->
+
+
+
+
+
+<div class="container color-dark">
     <div class="col">
-        <p class="life-container" *ngFor="let goal of goals" (click)="removeItem(i)">
-            {{ goal }}
-        </p>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" [@goals]="goals.length">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
     </div>
 </div>
