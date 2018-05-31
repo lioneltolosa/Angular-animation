@@ -6,69 +6,32 @@ import { DataService } from '../data.service';
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
-    // animations: [
-
-    //   trigger('goals', [
-    //     transition('* => *', [
-
-    //       query(':enter', style({ opacity: 0 }), {optional: true}),
-
-    //       query(':enter', stagger('300ms', [
-    //         animate('.6s ease-in', keyframes([
-    //           style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
-    //           style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
-    //           style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
-    //         ]))]), {optional: true})
-    //         ,
-    //       query(':leave', stagger('300ms', [
-    //         animate('.6s ease-out', keyframes([
-    //           style({opacity: 1, transform: 'translateY(0)', offset: 0}),
-    //           style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
-    //           style({opacity: 0, transform: 'translateY(-75%)',     offset: 1.0}),
-    //         ]))]), {optional: true})
-    //     ])
-    //   ])
-
-    // ]
-
-
-
     animations: [
-        trigger('goals', [
-            transition('* => *', [
-                style({ opacity: 0, transform: 'translateY()', offset: 0}),
-                animate(4000)
-            ])
 
-            // transition('* => void', [
-            //   animate(4000),
-            //   style({ opacity: 0})
-            // ]),
+      trigger('goals', [
+        transition('* => *', [
+
+          query(':enter', style({ opacity: 0 }), {optional: true}),
+
+          query(':enter', stagger('300ms', [
+            animate('.6s ease-in', keyframes([
+              style({opacity: 0, transform: 'translateY(-75%)', offset: 0}),
+              style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
+              style({opacity: 1, transform: 'translateY(0)',     offset: 1.0}),
+            ]))]), {optional: true})
+            ,
+          query(':leave', stagger('300ms', [
+            animate('.6s ease-out', keyframes([
+              style({opacity: 1, transform: 'translateY(0)', offset: 0}),
+              style({opacity: .5, transform: 'translateY(35px)',  offset: 0.3}),
+              style({opacity: 0, transform: 'translateY(-75%)',     offset: 1.0}),
+            ]))]), {optional: true})
         ])
+      ])
+
     ]
-
-
-
-
-
-    //  animations: [
-
-    //   trigger('openClose', [
-    //     state('true', style({ height: '*' })),
-    //     state('false', style({ height: '0px' })),
-    //     transition('false <=> true', animate(5000))
-    //   ])
-    // ]
-
-
-
-
-
-
-
-
-
 })
+
 export class HomeComponent implements OnInit {
 
     itemCount: number;

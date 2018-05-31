@@ -16,6 +16,7 @@ import {group, animate, query, transition, style, trigger} from '@angular/animat
           animate('0.5s ease-out', style({ left: '-100%' }))
         ])
       ])),
+      
       transition(":decrement", group([
         query(':enter', [
           style({ left: '-100%' }),

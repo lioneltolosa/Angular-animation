@@ -11,9 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AnimationsListComponent } from './animations-list/animations-list.component';
 import { CollapseComponent } from './collapse/collapse.component';
-import { ExampleAppComponent } from './example-app/example-app.component';
 import { Example2Component } from './example-2/example-2.component';
 import { HeroComponent } from './hero/hero.component';
+import { PopoverComponent } from './popover/popover.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 
 @NgModule({
@@ -23,9 +24,10 @@ import { HeroComponent } from './hero/hero.component';
     AboutComponent,
     AnimationsListComponent,
     CollapseComponent,
-    ExampleAppComponent,
     Example2Component,
-    HeroComponent
+    HeroComponent,
+    PopoverComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
