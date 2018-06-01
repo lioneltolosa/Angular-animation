@@ -37,7 +37,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    NgbModule
+    NgbModule.forRoot()
   ],
   providers: [
     DataService

@@ -7,39 +7,68 @@ import { trigger, style, state, group, transition, animate, keyframes, query, st
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
   animations: [
-    trigger('goals', [
-        transition("void => *", [
-            style({ opacity: 0 }),
-            animate(5000)
-        ])
-    ]),
     trigger('popOverState', [
-      state('inactive', style ({ opacity: '1', height: '*' })),
-      state('active', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
-      transition('inactive => active', animate('500ms ease-in'),),
-      transition('active => inactive', animate('500ms ease-out')),
-    ])
+      state('show', style ({ opacity: 1 })),
+      state('hide', style ({ opacity: 0 })),
+      transition('show => hide', animate('600ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in'))
+    ]),
+
+    // trigger('popOverState', [
+    //   state('inactive', style ({ opacity: '1', height: '*' })),
+    //   state('active', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
+
+    //   transition('inactive => active', animate('500ms ease-in'),),
+    //   transition('active => inactive', animate('500ms ease-out')),
+    // ]),
+
+
+      trigger('dropdownAnimation', [
+      state('show', style ({ opacity: '1', height: '*' })),
+      state('hide', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
+
+      transition('show => hide', animate('500ms ease-in'),),
+      transition('hide => show', animate('500ms ease-out')),
+    ]),
+
+
+
+
+
+
+
+
 
   ]
 })
 export class DropdownComponent implements OnInit {
 
+  // Implementation One
+
+  // state: string;
+
+  // constructor() { 
+  //   this.toggleState();
+  // }
+
+  // toggleState() {
+  //   this.state = this.state === 'active' ? 'inactive' :  'active';
+  // }
   
-  itemCount: number;
-  btnText: string = 'Add an Itemaaaaa';
-  goalText: string = 'My first life goal';
-  goals = [];
+  // Implementation two
 
-  state: string;
+  show = false;
 
-  constructor() { 
-    this.toggleState();
+  constructor() { }
+
+  get stateName() {
+    return this.show ? 'show' : 'hide';
   }
 
-  toggleState() {
-    this.state = this.state === 'active' ? 'inactive' :  'active';
+  toggle(){
+    this.show = !this.show
   }
-
+  
   ngOnInit() {
   }
 }

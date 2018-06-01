@@ -1,49 +1,39 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="dropdown" 
-                 (click)="toggleState()">
-                <a class="btn btn-secondary dropdown-toggle" 
-                   href="#" 
-                   role="button" 
-                   id="dropdownMenuLink" 
-                   data-toggle="dropdown" 
-                   aria-haspopup="true"
-                   aria-expanded="false">
-                   Menu Admin
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [@popOverState]="state">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+            <div ngbDropdown 
+                class="d-inline-block"
+                (click)="toggle()">
+
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+
+                <div ngbDropdownMenu 
+                     aria-labelledby="dropdownBasic1"
+                     [@popOverState]="stateName">
+
+                    <button class="dropdown-item">Action - 1</button>
+                    <button class="dropdown-item">Another Action</button>
+                    <button class="dropdown-item">Something else is here</button>
                 </div>
             </div>
         </div>
-        <!-- <div class="col">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" @popOverState>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-        </div>
+
         <div class="col">
-            <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [@goals]="goals">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+            <div ngbDropdown 
+                class="d-inline-block"
+                (click)="toggle()">
+
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+
+                <div ngbDropdownMenu 
+                        aria-labelledby="dropdownBasic1"
+                        [@dropdownAnimation]="stateName">
+
+                    <button class="dropdown-item">Action - 1</button>
+                    <button class="dropdown-item">Another Action</button>
+                    <button class="dropdown-item">Something else is here</button>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </div>
