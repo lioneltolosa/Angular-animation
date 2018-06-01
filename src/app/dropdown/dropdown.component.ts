@@ -7,12 +7,17 @@ import { trigger, style, state, group, transition, animate, keyframes, query, st
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss'],
   animations: [
-
     trigger('goals', [
         transition("void => *", [
             style({ opacity: 0 }),
             animate(5000)
         ])
+    ]),
+    trigger('popOverState', [
+      state('inactive', style ({ opacity: '1', height: '*' })),
+      state('active', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
+      transition('inactive => active', animate('500ms ease-in'),),
+      transition('active => inactive', animate('500ms ease-out')),
     ])
 
   ]
@@ -25,7 +30,15 @@ export class DropdownComponent implements OnInit {
   goalText: string = 'My first life goal';
   goals = [];
 
-  constructor() { }
+  state: string;
+
+  constructor() { 
+    this.toggleState();
+  }
+
+  toggleState() {
+    this.state = this.state === 'active' ? 'inactive' :  'active';
+  }
 
   ngOnInit() {
   }

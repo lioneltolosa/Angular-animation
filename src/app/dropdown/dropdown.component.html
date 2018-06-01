@@ -1,13 +1,49 @@
 <div class="container">
-    <div class="dropdown show">
-        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-      
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [@goals]="goals">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+    <div class="row">
+        <div class="col">
+            <div class="dropdown" 
+                 (click)="toggleState()">
+                <a class="btn btn-secondary dropdown-toggle" 
+                   href="#" 
+                   role="button" 
+                   id="dropdownMenuLink" 
+                   data-toggle="dropdown" 
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                   Menu Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [@popOverState]="state">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
         </div>
-      </div>
+        <!-- <div class="col">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" @popOverState>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" [@goals]="goals">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+        </div> -->
+    </div>
 </div>

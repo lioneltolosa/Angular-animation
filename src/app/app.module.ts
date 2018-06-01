@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { DataService } from './data.service'
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,8 @@ import { PopoverComponent } from './popover/popover.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,13 +30,14 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     Example2Component,
     HeroComponent,
     PopoverComponent,
-    DropdownComponent
+    DropdownComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgbModule
   ],
   providers: [
     DataService

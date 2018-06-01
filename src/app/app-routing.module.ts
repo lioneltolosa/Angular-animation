@@ -5,6 +5,8 @@ import { AboutComponent } from './about/about.component';
 import { PopoverComponent } from './popover/popover.component';
 import { Example2Component } from './example-2/example-2.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { MenuAnimateComponent } from './menu-animate/menu-animate.component';
+import { HeroComponent } from './hero/hero.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: 'dropdown',
     component: DropdownComponent
+  },
+  {
+    path: 'hero',
+    component: HeroComponent
   }
 ];
 

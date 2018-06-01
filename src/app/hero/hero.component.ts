@@ -17,18 +17,18 @@ import {
       state('active',   style({ backgroundColor: '#cfd8dc',transform: 'scale(1.1)'})),
       transition('inactive => active', animate('100ms ease-in')),
       transition('active => inactive', animate('100ms ease-out'))
-    ])
+    ]),
 
-      // trigger('flyInOut', [
-      //   state('in', style({transform: 'translateX(0)'})),
-      //   transition('void => *', [
-      //     style({transform: 'translateX(-100%)'}),
-      //     animate(100)
-      //   ]),
-      //   transition('* => void', [
-      //     animate(100, style({transform: 'translateX(100%)'}))
-      //   ])
-      // ])
+      trigger('flyInOut', [
+        state('in', style({transform: 'translateX(0)'})),
+        transition('void => *', [
+          style({transform: 'translateX(-100%)'}),
+          animate(100)
+        ]),
+        transition('* => void', [
+          animate(100, style({transform: 'translateX(100%)'}))
+        ])
+      ])
     ]
 })
 export class HeroComponent implements OnInit {
