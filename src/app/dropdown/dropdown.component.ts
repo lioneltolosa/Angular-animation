@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { trigger, style, state, group, transition, animate, keyframes, query, stagger } from '@angular/animations';
 
 
@@ -14,22 +14,31 @@ import { trigger, style, state, group, transition, animate, keyframes, query, st
       transition('hide => show', animate('1000ms ease-in'))
     ]),
 
-    // trigger('popOverState', [
-    //   state('inactive', style ({ opacity: '1', height: '*' })),
-    //   state('active', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
 
-    //   transition('inactive => active', animate('500ms ease-in'),),
-    //   transition('active => inactive', animate('500ms ease-out')),
-    // ]),
-
-
-      trigger('dropdownAnimation', [
+    trigger('dropdownAnimation', [
       state('show', style ({ opacity: '1', height: '*' })),
       state('hide', style ({ opacity: '0', height: '0px', overflow: 'hidden' })),
 
       transition('show => hide', animate('500ms ease-in'),),
       transition('hide => show', animate('500ms ease-out')),
     ]),
+
+
+
+   
+    trigger('heroState', [
+      state('inactive', style({
+        backgroundColor: '#eee',
+        transform: 'scale(1)'
+      })),
+      state('active',   style({
+        backgroundColor: '#cfd8dc',
+        transform: 'scale(1.1)'
+      })),
+      transition('inactive => active', animate('100ms ease-in')),
+      transition('active => inactive', animate('100ms ease-out'))
+    ])
+  
 
 
 
@@ -42,6 +51,7 @@ import { trigger, style, state, group, transition, animate, keyframes, query, st
   ]
 })
 export class DropdownComponent implements OnInit {
+
 
   // Implementation One
 

@@ -7,6 +7,7 @@ import { PopoverComponent } from './popover/popover.component';
 import { Example2Component } from './example-2/example-2.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { HeroComponent } from './hero/hero.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'hero',
     component: HeroComponent
+  },
+  {
+    path: 'tabs',
+    component: TabsComponent
   }
 ];
 

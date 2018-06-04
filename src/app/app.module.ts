@@ -16,6 +16,7 @@ import { Example2Component } from './example-2/example-2.component';
 import { HeroComponent } from './hero/hero.component';
 import { PopoverComponent } from './popover/popover.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 
@@ -31,6 +32,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     HeroComponent,
     PopoverComponent,
     DropdownComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,
