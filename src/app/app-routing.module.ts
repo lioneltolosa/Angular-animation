@@ -8,6 +8,7 @@ import { Example2Component } from './example-2/example-2.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { HeroComponent } from './hero/hero.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { ExampleAnimation01Component } from './example-animation-01/example-animation-01.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsComponent
+  },
+  {
+    path: 'exapleAnimation',
+    component: ExampleAnimation01Component
   }
 ];
 

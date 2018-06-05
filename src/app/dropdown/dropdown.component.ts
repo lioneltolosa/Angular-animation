@@ -24,30 +24,19 @@ import { trigger, style, state, group, transition, animate, keyframes, query, st
     ]),
 
 
-
-   
-    trigger('heroState', [
-      state('inactive', style({
+    
+    trigger('scaleAnimation', [
+      state('show', style({
         backgroundColor: '#eee',
         transform: 'scale(1)'
       })),
-      state('active',   style({
+      state('hide',   style({
         backgroundColor: '#cfd8dc',
         transform: 'scale(1.1)'
       })),
-      transition('inactive => active', animate('100ms ease-in')),
-      transition('active => inactive', animate('100ms ease-out'))
+      transition('show => hide', animate('100ms ease-in'),),
+      transition('hide => show', animate('100ms ease-out')),
     ])
-  
-
-
-
-
-
-
-
-
-
   ]
 })
 export class DropdownComponent implements OnInit {

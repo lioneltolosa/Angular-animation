@@ -1,15 +1,41 @@
 <div class="container">
-  <div [@popOverState]="stateName">
-    <p>Hola bebe</p>
-  </div>
-  
-  <button type="button" 
-          class="btn btn-secondary" 
-          data-container="body" 
-          data-toggle="popover" 
-          data-placement="top" 
-          data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
-          (click)="toggle()">
-    Popover Animation
-  </button>
+    <div class="row">
+        <div class="col">
+            <div [@popOverState]="stateName">
+                <p>Hola bebe</p>
+            </div>
+            <button type="button" 
+                    class="btn btn-secondary" 
+                    data-container="body" 
+                    data-toggle="popover" 
+                    data-placement="top" 
+                    data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                    (click)="toggle()">
+            Popover Animation
+            </button>
+        </div>
+
+
+        <div class="col">
+            <div ngbDropdown 
+                 class="d-inline-block">
+
+                <button class="btn btn-outline-primary" 
+                        id="dropdownBasic1" 
+                        ngbDropdownToggle
+                        (click)="toggle()">
+                        Toggle dropdown
+                </button>
+
+                <div ngbDropdownMenu 
+                     aria-labelledby="dropdownBasic1" 
+                     [@popOverState1]="stateName">
+
+                    <button class="dropdown-item">Action - 1</button>
+                    <button class="dropdown-item">Another Action</button>
+                    <button class="dropdown-item">Something else is here</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
