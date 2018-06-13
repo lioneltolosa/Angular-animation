@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { trigger, style, state, group, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
+import { trigger, style, state, transition, animate } from '@angular/animations';
 
 
 @Component({

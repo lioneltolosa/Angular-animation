@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .rect {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
